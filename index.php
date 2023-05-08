@@ -5,7 +5,7 @@
 
   <link rel="icon" href="img/logo.png">
 
-  <title>AtoLaundry</title>
+  <title>Tome Ornai</title>
 
   <!-- Required meta tags -->
   <meta charset="utf-8" />
