@@ -1,0 +1,45 @@
+
+.container-fluid h3 {
+  text-align: center;
+  margin-top: 30px;
+  font-family: Viga;
+  color: #007bff;
+  font-size: 50px;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+}
+
+lottie-player {
+  display: none;
+}
+
+
+/* utility */
+.input {
+  border-radius: 40px;
+  padding: 20px;
+}
+
+.input:hover {
+  border: 1px solid #007bff;
+
+}
+
+.tombol {
+  border-radius: 40px;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .kotak {
+    margin-top: 50px;
+  }
+
+  .container h3 {
+    font-size: 75px;
+  }
+
+  lottie-player {
+    display: inline-block;
+  }
+
+}

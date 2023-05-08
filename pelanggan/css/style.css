@@ -1,0 +1,46 @@
+  body {
+    background-color: #dedede !important;
+  }
+
+  .kotak {
+    margin-top: 60px;
+  }
+
+  .container h3 {
+    text-align: center;
+    font-family: Viga;
+    color: #007bff;
+    font-size: 50px;
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+
+  }
+
+  .header p {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 14px;
+    color: #929292;
+  }
+
+  .link {
+    font-size: 14px;
+  }
+
+  .link:hover {
+    color: blue;
+  }
+
+  @media (min-width: 992px) {
+     .kotak {
+        margin-top: 150px;
+      }
+
+    .header p,.container h3 {
+        text-transform: capitalize;
+        text-align: left;
+      }
+    .container h3 {
+      font-size:75px;
+    }
+
+  }
