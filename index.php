@@ -5,7 +5,7 @@
 
   <link rel="icon" href="img/logo.png">
 
-  <title>Tome Ornai</title>
+  <title>Tome Ornai Barros</title>
 
   <!-- Required meta tags -->
   <meta charset="utf-8" />
