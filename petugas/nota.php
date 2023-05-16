@@ -1,5 +1,4 @@
 <?php
-include "restrick.php";
 include "../koneksi.php";
 
 include '../getdata.php';
@@ -15,17 +14,17 @@ $nama = $_GET['nama'];
 $idtransaksi = $_GET['idtransaksi'];
 $data = mysqli_query($koneksi, "SELECT * FROM transaksi WHERE idtransaksi LIKE '$idtransaksi'");
 if (mysqli_num_rows($data) > 0) {
-while ($d = mysqli_fetch_array($data)) {
-$idtransaksi = $d['idtransaksi'];
-$tanggalterima = $d['tanggalterima'];
-$idpetugaspenerima = $d['idpetugaspenerima'];
-$tanggalserah = $d['tanggalserah'];
-$idpetugasserah = $d['idpetugasserah'];
-$idpelanggan = $d['idpelanggan'];
-$catatan = $d['catatan'];
-$nik = $d['nik'];
-$status = $d['status'];
-}
+  while ($d = mysqli_fetch_array($data)) {
+    $idtransaksi = $d['idtransaksi'];
+    $tanggalterima = $d['tanggalterima'];
+    $idpetugaspenerima = $d['idpetugaspenerima'];
+    $tanggalserah = $d['tanggalserah'];
+    $idpetugasserah = $d['idpetugasserah'];
+    $idpelanggan = $d['idpelanggan'];
+    $catatan = $d['catatan'];
+    $nik = $d['nik'];
+    $status = $d['status'];
+  }
 }
 ?>
 

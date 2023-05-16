@@ -40,28 +40,25 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">AtoLaundry</a>
-
+      <a class="navbar-brand" href="#">BEM Laundry</a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
           <a class="nav-link active" id="home" href="#home">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-link" href="#about">About Us</a>
-          <a class="nav-link" href="#location">Location</a>
-
+          <a class="nav-link" href="#about">Tentang Kami</a>
+          <a class="nav-link" href="#location">Lokasi</a>
 
           <div class="ml-auto mb-2 akun">
-            <a class="btn btn-outline-light" href="registrasi/">Sign Up</a>
+            <a class="btn btn-outline-light" href="registrasi/">Daftar</a>
           </div>
 
           <ul class="justify-content-end d-flex akun">
             <li>
-              <a class="btn btn-light dropdown-toggle">Sign In</a>
+              <a class="btn btn-light dropdown-toggle">Login</a>
               <ul>
                 <li><a href="pelanggan/" class="text-light" title="Login Pelanggan">pelanggan</a></li>
                 <li><a href="petugas/" class="text-light" title="Login Petugas">petugas</a></li>
@@ -82,8 +79,7 @@
   <div class="jumbotron">
     <div class="container">
       <h1 class="display-4">
-        Cuci <span>Bersih</span> Dan <span>Rapi</span><br />
-        Di <span>AtoLaundry</span>
+        Selamat Datang Di <span>BEM Laundry</span>
       </h1>
     </div>
   </div>
@@ -92,39 +88,12 @@
   <!-- container -->
   <div class="container">
 
-    <!-- info panel -->
-    <div class="row justify-content-center" data-aos="zoom-in-down" data-aos-offset="20" data-aos-duration="1200" data-aos-easing="ease-out">
-      <div class="col-lg-11 info-panel">
-        <div class="row">
-          <div class="col-lg">
-            <img src="img/24jam.png" alt="" class="float-left" />
-            <h4>24 Jam</h4>
-            <p>Admin aktif 24 jam untuk melayani Anda</p>
-          </div>
-          <div class="col-lg">
-            <img src="img/registrasi.png" alt="" class="float-left" />
-            <h4><a href="registrasi/">registrasi sekarang</a></h4>
-            <p>Registrasi akun untuk mengakses AtoLaundry</p>
-          </div>
-          <div class="col-lg">
-            <img src="img/security.png" alt="" class="float-left" />
-            <h4>Keamanan</h4>
-            <p>Prosses transfer data di enkripsi secara maksimal</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- akhir info panel -->
-
-    <audio autoplay>
-      <source src="audio/jinglebel.mp3" type="audio/mpeg">
-    </audio>
     <!-- about us -->
 
     <!-- awal about -->
     <div class="row justify-content-center about" id="about">
       <div class="col">
-        <h2 class="text-center" data-aos="fade-up" data-aos-duration="1000">About Us</h2>
+        <h2 class="text-center" data-aos="fade-up" data-aos-duration="1000">Tentang Kami</h2>
       </div>
     </div>
 
@@ -134,9 +103,9 @@
           </lottie-playe>
       </div>
       <div class="col-lg-6 mt-5" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-        <h3>Website <span>Tugas</span> kampus <br><span>Web Program 1</span></h3>
-        <p>Website ini dibuat oleh tome ornai barros mahasiswa stikom uyelindo kupang </p>
-        <a href="mailto:admin@21120055laundry.my.id?subject=Dari%20AtoLaundry&body=Dear%20Admin%0A" class="btn btn-primary kontak tombol" title="Contak Admin Via Email">Contact me</a>
+        <h3>Website Laundry BEM Stikom Uyelindo Kupang</h3>
+        <p class="text-capitalize">minimalis, elegan, warna-warna cerah, mudah digunakan, transparan, ramah lingkungan, layanan antar-jemput, paket khusus, keamanan data, blog berita terkini, promo dan diskon, integrasi dengan media sosial, pilihan bahasa, sistem pembayaran yang aman, estimasi waktu selesai, layanan cuci kilat, memberikan tips perawatan pakaian, layanan penjemputan 24 jam, pilihan deterjen berkualitas, sistem reward atau loyalty program.</p>
+        <!-- <a href="mailto:admin@21120055laundry.my.id?subject=Dari%20AtoLaundry&body=Dear%20Admin%0A" class="btn btn-primary kontak tombol" title="Contak Admin Via Email">Contact me</a> -->
       </div>
     </div>
     <!-- akhir about us -->
@@ -165,7 +134,7 @@
 
 
     <!-- developer -->
-    <div class="dev">
+    <!-- <div class="dev">
       <div class="row justify-content-center">
         <div class="col-6  justify-content-center d-flex">
           <figure class="figure">
@@ -183,7 +152,7 @@
           </figure>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- developer akir -->
 
@@ -214,14 +183,14 @@
           var wn = $(window).scrollTop();
           if (wn > 10) {
             $(".navbar").css("background", "rgba(0,0,0,0.6)");
-            $(".navbar-brand").css("font-size", "32px");
+            $(".navbar-brand").css("font-size", "30px");
             // $("navbar").css("transition", "all 3s");
           } else {
             $(".navbar").css("background", "none");
           }
 
           if (wn == 0) {
-            $(".navbar-brand").css("font-size", "50px");
+            $(".navbar-brand").css("font-size", "32px");
           }
         });
 
@@ -234,8 +203,6 @@
         });
       });
     </script>
-    <!-- snow -->
-    <script src="script.js"></script>
 </body>
 
 </html>
