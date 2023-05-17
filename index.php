@@ -85,10 +85,7 @@
   </div>
 
   <!-- akhir jumbutron -->
-  <!-- container -->
   <div class="container">
-
-    <!-- about us -->
 
     <!-- awal about -->
     <div class="row justify-content-center about" id="about">
@@ -134,25 +131,6 @@
 
 
     <!-- developer -->
-    <!-- <div class="dev">
-      <div class="row justify-content-center">
-        <div class="col-6  justify-content-center d-flex">
-          <figure class="figure">
-            <img src="img/tome.jpg" class="figure-img img-fluid rounded-circle img-thumbnail" alt="TomeOrnaiBarros" data-aos="flip-left" data-aos-duration="2000">
-            <figcaption class="text-center">Tome Ornai Barros</figcaption>
-            <p class="text-muted text-center">Mahasiswa Biasa</p>
-
-            <div class="row">
-              <div class="col justify-content-center d-flex">
-                <a href="https://www.instagram.com/tome_barros/" target="_blank" class="mx-2"><i class="fa-brands fa-instagram bg-dark p-2 rounded text-light text-center"></i></a>
-                <a href="https://www.youtube.com/@tomebarros2153" target="_blank" class="mx-2"><i class="fa-brands fa-youtube bg-dark p-2 rounded text-light text-center"></i></a>
-                <a href="https://web.facebook.com/ato.barros.37" target="_blank" class="mx-2"><i class="fa-brands fa-facebook bg-dark p-2 rounded text-light"></i></a>
-              </div>
-            </div>
-          </figure>
-        </div>
-      </div>
-    </div> -->
 
     <!-- developer akir -->
 
@@ -165,44 +143,46 @@
         © 2022 Copyright: <a href="#home" class="text-dark"> AtoLaundry</a>
       </div>
     </div>
-
-    <!-- akhir footer -->
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-    <!-- Aos Animation-->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-
-    <script>
-      $(document).ready(function() {
-        $(window).on("scroll", function() {
-          var wn = $(window).scrollTop();
-          if (wn > 10) {
-            $(".navbar").css("background", "rgba(0,0,0,0.6)");
-            $(".navbar-brand").css("font-size", "30px");
-            // $("navbar").css("transition", "all 3s");
-          } else {
-            $(".navbar").css("background", "none");
-          }
-
-          if (wn == 0) {
-            $(".navbar-brand").css("font-size", "32px");
-          }
-        });
+  </div>
 
 
-      });
+  <!-- akhir footer -->
 
-      $(document).ready(function() {
-        $(".navbar-toggler").on("click", function() {
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+  <!-- Aos Animation-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      $(window).on("scroll", function() {
+        var wn = $(window).scrollTop();
+        if (wn > 10) {
           $(".navbar").css("background", "rgba(0,0,0,0.6)");
-        });
+          $(".navbar-brand").css("font-size", "30px");
+          // $("navbar").css("transition", "all 3s");
+        } else {
+          $(".navbar").css("background", "none");
+        }
+
+        if (wn == 0) {
+          $(".navbar-brand").css("font-size", "32px");
+        }
       });
-    </script>
+
+
+    });
+
+    $(document).ready(function() {
+      $(".navbar-toggler").on("click", function() {
+        $(".navbar").css("background", "rgba(0,0,0,0.6)");
+      });
+    });
+  </script>
 </body>
 
 </html>
