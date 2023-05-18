@@ -22,7 +22,7 @@ if (mysqli_num_rows($data2)) {
 $namapelanggan = explode(' ', namapelanggan($idpelanggan));
 $namapelanggan = $namapelanggan[0];
 
-$v1 = date('m-d',strtotime($tanggallahir));
+$v1 = date('m-d', strtotime($tanggallahir));
 $v2 = date('m-d');
 
 ?>
@@ -31,10 +31,10 @@ $v2 = date('m-d');
 <html lang="en">
 
 <head>
-  <title>Beranda</title>
-  
-  
-  
+  <title>BEM | Beranda</title>
+
+
+
   <?php include '../cdn.php'; ?>
   <link rel="stylesheet" href="css/beranda.css">
   <!-- AOS Animation -->
@@ -52,7 +52,7 @@ $v2 = date('m-d');
   <div class="wrapper">
 
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-      <a href="#" class="navbar-brand">Ato Laundry </a>
+      <a href="#" class="navbar-brand">BEM STIKOM </a>
       <span class="tgl"><?php echo date("D, d M Y"); ?> </span><span id="clock"></span>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapseNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -68,23 +68,23 @@ $v2 = date('m-d');
 
     <div class="container shadow p-4 mb-4 bg-white">
       <h1 id="header"></h1>
-      
-      <?php 
+
+      <?php
       if ($v1 == $v2) {
       ?>
-      <div class="row baner">
-      	<div class="col-lg-9">
-        	<?php include '../crs.php'; ?>
+        <div class="row baner">
+          <div class="col-lg-9">
+            <?php include '../crs.php'; ?>
+          </div>
+          <div class="col-lg-3 mt-5 mx-auto">
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_PojUhtZ8aP.json" background="transparent" style="width: 70%; margin:auto;" speed="1" loop autoplay></lottie-player>
+          </div>
         </div>
-      	<div class="col-lg-3 mt-5 mx-auto">
-          <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_PojUhtZ8aP.json"  background="transparent" style="width: 70%; margin:auto;"  speed="1" loop  autoplay></lottie-player>
-        </div>
-      </div>
-      
-      <?php 
+
+      <?php
       } else {
         include '../crs.php';
-      }      
+      }
       ?>
 
       <p class="mt-2 judul">
@@ -110,17 +110,16 @@ $v2 = date('m-d');
 
       <p class="lead mt-2 judul"></p>
       <?php
-    
+
       // var_dump($v1);
       // var_dump($v2);
       if ($v1 == $v2) {
-          echo "<marquee style='background-image: linear-gradient(to right,#007bff,rgb(43, 0, 216)); padding:4px; color:white;'scrollamount='5'>Selamat Ulang Tahun $namapelanggan</marquee>";
-          echo '
+        echo "<marquee style='background-image: linear-gradient(to right,#007bff,rgb(43, 0, 216)); padding:4px; color:white;'scrollamount='5'>Selamat Ulang Tahun $namapelanggan</marquee>";
+        echo '
               <audio autoplay>
                 <source src="../audio/hbd.mp3" type="audio/mpeg">
               </audio>
           ';
-                
       }
       ?>
 
@@ -207,10 +206,10 @@ $v2 = date('m-d');
 
           <div class="row">
             <div class="col-md-6">
-              
-             	<table>
-                  <thead>
-                    <tr>
+
+              <table>
+                <thead>
+                  <tr>
                     <td>
                       Nama <br>
                       Jenis-Kelamin <br>
@@ -222,23 +221,18 @@ $v2 = date('m-d');
                     <td>
                       :<?php echo $nama; ?> <br>
                       : <?php echo $jeniskelamin; ?> <br>
-                      : <?php echo $tanggallahir; ?> <br>
+                      : <?php echo tanggal($tanggallahir); ?> <br>
                       : <?php echo $alamat; ?> <br>
                       : <?php echo $email; ?> <br>
                       : <?php echo $telepon; ?> <br>
                     </td>
-                    </tr>
-                  </thead>
-                </table>
+                  </tr>
+                </thead>
+              </table>
 
-            <a class="btn btn-outline-primary btn-sm" href="kartunama.php" target="_blank">Kartu Nama</a>
-            
-            
-            
+              <a class="btn btn-outline-primary btn-sm" href="kartunama.php" target="_blank">Kartu Nama</a>
             </div>
-
             <div class="col-md-6 mt-3">
-
               <form action="ubahpassword.php" method="POST">
                 <input type="hidden" name="idpelanggan" value="<?php echo $idpelanggan; ?>">
 
@@ -281,30 +275,9 @@ $v2 = date('m-d');
 
 
     <footer class="text-center text-white fix" style="background-color: #f1f1f1;">
-      <!-- Grid container -->
-      <div class="container">
-        <!-- pt-4 -->
-        <!-- Section: Social media -->
-        <section>
-          <!-- mb-4 -->
-          <!-- Youtube -->
-          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.youtube.com/channel/UCs6i13Cahk4zNTwfZ35EGXA" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="bi bi-youtube"></i></a>
-          <!-- Instagram -->
-          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/tome_barros/" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="bi bi-instagram"></i></a>
-          <!-- Github -->
-          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://github.com/tomebarros" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="bi bi-github"></i></a>
-          <!-- Facebook -->
-          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://web.facebook.com/ato.barros.37?_rdc=1&_rdr" target="_blank" role="button" data-mdb-ripple-color="dark"><i class="bi bi-facebook"></i></a>
-        </section>
-        <!-- Section: Social media -->
+      <div class="text-center text-dark p-3 copyright" style="background-color: #fff">
+        <a href="https://github.com/tomebarros" target="_blank" class="text-dark text-decoration-none">&copy; Tome Barros</a>
       </div>
-      <!-- Grid container -->
-
-      <!-- Copyright -->
-      <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        Sistem Ini Dibuat Denggan Penuh <i class="bi bi-heart-fill"></i>
-      </div>
-      <!-- Copyright -->
     </footer>
 
   </div>
@@ -343,31 +316,30 @@ $v2 = date('m-d');
     });
 
     //myClock
-    
-  function updateClock() {
-    var now = new Date();
-    var hours = now.getHours();
-    var minutes = now.getMinutes();
-    var seconds = now.getSeconds();
-    
-    // Pad jam, menit, dan detik dengan nol jika diperlukan
-    hours = (hours < 10) ? "0" + hours : hours;
-    minutes = (minutes < 10) ? "0" + minutes : minutes;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-    
-    // Membangun string waktu yang akan ditampilkan
-    var timeString = hours + ":" + minutes + ":" + seconds;
-    
-    // Mengambil elemen HTML yang akan digunakan untuk menampilkan jam
-    var clockElement = document.getElementById("clock");
-    
-    // Menampilkan jam di elemen HTML
-    clockElement.innerHTML = timeString;
-  }
-  
-  // Memanggil fungsi updateClock setiap detik
-  setInterval(updateClock, 1000);
 
+    function updateClock() {
+      var now = new Date();
+      var hours = now.getHours();
+      var minutes = now.getMinutes();
+      var seconds = now.getSeconds();
+
+      // Pad jam, menit, dan detik dengan nol jika diperlukan
+      hours = (hours < 10) ? "0" + hours : hours;
+      minutes = (minutes < 10) ? "0" + minutes : minutes;
+      seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+      // Membangun string waktu yang akan ditampilkan
+      var timeString = hours + ":" + minutes + ":" + seconds;
+
+      // Mengambil elemen HTML yang akan digunakan untuk menampilkan jam
+      var clockElement = document.getElementById("clock");
+
+      // Menampilkan jam di elemen HTML
+      clockElement.innerHTML = timeString;
+    }
+
+    // Memanggil fungsi updateClock setiap detik
+    setInterval(updateClock, 1000);
   </script>
 
 

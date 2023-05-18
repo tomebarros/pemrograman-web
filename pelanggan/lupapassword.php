@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Viga&display=swap" rel="stylesheet" />
   <style>
     body {
       background-color: #dedede !important;
     }
-    
-  .navbar-brand{
-    font-family: Viga;
-    color : black;
-    font-size: 32px !important;
-  }
 
-    .kotak{
+    .navbar-brand {
+      font-family: Viga;
+      color: black;
+      font-size: 32px !important;
+    }
+
+    .kotak {
       margin-top: 5vh;
 
     }
@@ -27,9 +27,9 @@
   <nav class="navbar navbar-expand-md bg-light navbar-light">
     <div class="container">
 
-      <a href="#" class="navbar-brand">AtoLaundry</a>
+      <a href="#" class="navbar-brand">BEM Laundry</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-       <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="collapsibleNavbar">

@@ -93,21 +93,19 @@ ul li ul li a:hover {
 .jumbotron::after {
   content: '';
   display: block;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
   position: absolute;
-  bottom: 0;
-  left: -1px;
+  width: 100%;
+  height: 101%;
+  background: linear-gradient(0deg, #dedede 3%, rgba(255, 255, 255, 0) 35%);
 }
 
 /* jumbotron display4 */
 
 .jumbotron .display-4 {
 
-  color: white;
+  color: #dedede;
   font-weight: 200px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
   font-size: 40px;
 }
 

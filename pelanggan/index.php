@@ -1,51 +1,47 @@
-<?php 
+<?php
 session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
 
 
-    <?php include "../cdn.php"; ?>
+  <?php include "../cdn.php"; ?>
 
 
 
-    <!-- mycss -->
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Login Pelanggan</title>
-  </head>
+  <!-- mycss -->
+  <link rel="stylesheet" href="css/style.css" />
+  <title>BEM | Login Pelanggan</title>
+</head>
 
-  <body>
-    
-    
-    
-    
-    
-    
-      <?php
-        if (isset($_GET['pesan'])) {
-          if ($_GET['pesan'] == 'belumverifikasi') {
+<body>
 
-            // if (empty($nama) && empty($email) && empty($telepon)){
-            //   // die;
-            //   echo "
-            //   <script>
-            //     history.go(-1)
-            //   </script>
-            //   "; 
-            //   exit;
-            // }
+  <?php
+  if (isset($_GET['pesan'])) {
+    if ($_GET['pesan'] == 'belumverifikasi') {
 
-            //data email
-            $nama = $_SESSION['namapelanggan'];
-            $email = $_SESSION['emailpelanggan'];
-            $telepon = $_SESSION['teleponpelanggan'];
-            $linkemail = 'mailto:admin@21120055laundry.my.id?subject=Verifikasi%20Data&body=Dear%20Admin%20AtoLaundry%0ASaya%20Ingin%20Verifikasi%20Akun%20Saya.%20Berikut%20Adalah%20Identitas%20Saya.%0A%0ANama:%20' . $nama . '%0AEmail:%20' . $email . '%0ANo%20Telepon:%20' . $telepon . '';
-            $linkWa = 'api.whatsapp.com/send?phone=6282146199762&text=Dear+Admin+*AtoLaundry*%0ASaya+Ingin+*Verifikasi*+Akun+Saya.+Berikut+Adalah+Identitas+Saya.%0A%0ANama:+' . $nama . '%0AEmail:+' . $email . '%0ANo+Telepon:+' . $telepon . '';
+      // if (empty($nama) && empty($email) && empty($telepon)){
+      //   // die;
+      //   echo "
+      //   <script>
+      //     history.go(-1)
+      //   </script>
+      //   "; 
+      //   exit;
+      // }
+
+      //data email
+      $nama = $_SESSION['namapelanggan'];
+      $email = $_SESSION['emailpelanggan'];
+      $telepon = $_SESSION['teleponpelanggan'];
+      $linkemail = 'mailto:admin@21120055laundry.my.id?subject=Verifikasi%20Data&body=Dear%20Admin%20AtoLaundry%0ASaya%20Ingin%20Verifikasi%20Akun%20Saya.%20Berikut%20Adalah%20Identitas%20Saya.%0A%0ANama:%20' . $nama . '%0AEmail:%20' . $email . '%0ANo%20Telepon:%20' . $telepon . '';
+      $linkWa = 'api.whatsapp.com/send?phone=6282146199762&text=Dear+Admin+*BEM+Laundry*%0ASaya+Ingin+*Verifikasi*+Akun+Saya.+Berikut+Adalah+Identitas+Saya.%0A%0ANama:+' . $nama . '%0AEmail:+' . $email . '%0ANo+Telepon:+' . $telepon . '';
 
 
-            echo "
+      echo "
             <script>
               Swal.fire({
                 icon: 'warning',
@@ -91,8 +87,8 @@ session_start();
               })
             </script>
             ";
-          } else if ($_GET['pesan'] == 'gagal') {
-            echo "
+    } else if ($_GET['pesan'] == 'gagal') {
+      echo "
             <script>
               Swal.fire({
                 icon: 'error',
@@ -102,8 +98,8 @@ session_start();
               })
             </script>
             ";
-          } else if ($_GET['pesan'] == 'belumlogin') {
-            echo "
+    } else if ($_GET['pesan'] == 'belumlogin') {
+      echo "
             <script>
               Swal.fire({
                 icon: 'warning',
@@ -113,8 +109,8 @@ session_start();
               })
             </script>
             ";
-          } else if ($_GET['pesan'] == 'logout') {
-            echo "<script>
+    } else if ($_GET['pesan'] == 'logout') {
+      echo "<script>
             Swal.fire({
               icon: 'success',
               title: 'Logout',
@@ -122,52 +118,52 @@ session_start();
               confirmButtonColor: '#28a745',
             })
             </script>";
-          }
-        }
-        ?>
-    
-    
-    
-    
-    
-    
-    <div class="container">
-      <div class="row kotak">
-        <div class="col-lg-6 mt-3 header">
-          <h3>AtoLaundry</h3>
-          <p>Dengan AtoLaundry anda dapat memantau transaksi dan data anda</p>
-        </div>
+    }
+  }
+  ?>
 
-        <div class="col-lg-6">
-          <div class="row mx-2">
-            <div class="col-11 shadow p-4 mb-3 bg-light mx-auto rounded-lg">
-              <h2>Login Pelanggan</h2>
-              <hr />
-              <form method="POST" action="ceklogin.php">
-                <div class="mb-3">
-                  <input type="email" name="email" class="form-control" placeholder="Email Anda" required autofocus="1" />
-                  <input type="password" name="password" class="form-control mt-2" placeholder="Password Anda" required />
-                </div>
-                
-                <button type="submit" class="btn btn-primary col">Login</button>
-                <p><a href="lupapassword.php" class="link">Lupa Password?</a></p>
-              </form>
-                
-                <div class="row">
-                  <div class="col"><hr /></div>
-                  <div class="col text-center">Atau</div>
-                  <div class="col"><hr /></div>
-                </div>
+  <div class="container">
+    <div class="row kotak">
+      <div class="col-lg-6 mt-3 header">
+        <h3>BEM Laundry</h3>
+        <p>Dengan BEM Laundry anda dapat memantau transaksi dan data anda</p>
+      </div>
 
-                <div class="col d-flex justify-content-center">
-                  <a href="../registrasi" class="btn btn-success">Buat Akun Baru</a>
-                </div>
+      <div class="col-lg-6">
+        <div class="row mx-2">
+          <div class="col-11 shadow p-4 mb-3 bg-light mx-auto rounded-lg">
+            <h2>Login Pelanggan</h2>
+            <hr />
+            <form method="POST" action="ceklogin.php">
+              <div class="mb-3">
+                <input type="email" name="email" class="form-control" placeholder="Email Anda" required autofocus="1" />
+                <input type="password" name="password" class="form-control mt-2" placeholder="Password Anda" required />
+              </div>
+
+              <button type="submit" class="btn btn-primary col">Login</button>
+              <p><a href="lupapassword.php" class="link">Lupa Password?</a></p>
+            </form>
+
+            <div class="row">
+              <div class="col">
+                <hr />
+              </div>
+              <div class="col text-center">Atau</div>
+              <div class="col">
+                <hr />
+              </div>
+            </div>
+
+            <div class="col d-flex justify-content-center">
+              <a href="../registrasi" class="btn btn-success">Buat Akun Baru</a>
             </div>
           </div>
-
-          <a href="../" class="link ml-5">Kembali Ke Dashboard</a>
         </div>
+
+        <a href="../" class="link ml-5">Kembali Ke Dashboard</a>
       </div>
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

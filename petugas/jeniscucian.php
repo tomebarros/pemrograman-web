@@ -6,7 +6,7 @@ include "../koneksi.php";
 <html lang="en">
 
 <head>
-  <title>Laundry | Jenis Cucian</title>
+  <title>BEM | Jenis Cucian</title>
   <?php include "../cdn.php"; ?>
   <?php include "../tema.php"; ?>
 </head>

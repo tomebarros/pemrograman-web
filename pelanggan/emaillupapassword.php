@@ -1,4 +1,4 @@
-<?php 
+<?php
 include '../koneksi.php';
 include '../getdata.php';
 
@@ -49,10 +49,10 @@ if (mysqli_num_rows($data) > 0) {
     document.location.href='index.php'
     </script>
   ";
-}else {
-	 echo "
+} else {
+  echo "
  	 <script>
-      alert('Email Yang Anda Masukan Tidak Terdaftar Di AtoLaundry')
+      alert('Email Yang Anda Masukan Tidak Terdaftar Di BEM Laundry')
       history.go(-1)
     </script>
   ";

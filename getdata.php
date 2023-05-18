@@ -1,4 +1,11 @@
 <?php
+function getData($query)
+{
+  include "koneksi.php";
+  $result = mysqli_query($koneksi, $query);
+  return mysqli_num_rows($result);
+}
+
 function idpetugas($email)
 {
   include "koneksi.php";
@@ -51,7 +58,7 @@ function namapetugas1($idpetugas)
       $hasil = $d['nama'];
     }
   } else {
-    $hasil = '';
+    $hasil = '-';
   }
   return $hasil;
 }
@@ -111,7 +118,11 @@ function rupiah($angka)
 
 function tanggal($tanggal)
 {
-  return date('d M y', strtotime($tanggal));
+  if (is_null($tanggal) or $tanggal == '0000-00-00') {
+    return '-';
+  } else {
+    return date('d M y', strtotime($tanggal));
+  }
 }
 
 
@@ -176,14 +187,3 @@ function cekverifikasistatus($email)
     }
   }
 }
-
-
-
-
-
-
-
-
-
-
-

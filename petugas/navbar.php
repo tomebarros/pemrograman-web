@@ -9,7 +9,7 @@ $namapetugas = explode(' ', $namapetugas);
 $namapetugas = $namapetugas[0];
 ?>
 <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
-  <a href="#" class="navbar-brand">Ato Laundry</a>
+  <a href="#" class="navbar-brand">BEM Laundry</a>
   <span class="tgl"><?php echo date("D, d M Y"); ?></span><span id="clock"></span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>

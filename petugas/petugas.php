@@ -6,7 +6,7 @@ include "../koneksi.php";
 <html lang="en">
 
 <head>
-	<title>Laundry | Petugas</title>
+	<title>BEM | Petugas</title>
 	<?php include "../cdn.php"; ?>
 	<?php include "../tema.php"; ?>
 </head>
@@ -23,11 +23,11 @@ include "../koneksi.php";
 			<div class="row">
 				<div class="col-sm-3">
 					<a href="#" class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModalinsert">Tambah Data <i class="bi bi-person-plus-fill"></i></a>
-              <a href="backup.php" class="btn btn-sm btn-warning">DB BackUP</a>
-				    
-              
-              
-              </div>
+					<a href="backup.php" class="btn btn-sm btn-warning">DB BackUP</a>
+
+
+
+				</div>
 				<div class="col-sm-9 mt-2">
 					<input type="text" class="form-control" id="myInput" placeholder="Cari...">
 				</div>
@@ -169,8 +169,6 @@ include "../koneksi.php";
 													</div>
 													<input type="text" class="form-control" name="alamat" value="<?php echo $d['alamat'] ?>" required>
 												</div>
-
-
 
 												<input type="hidden" name="telepon" value="<?php echo $d['telepon']; ?>">
 												<input type="hidden" name="email" value="<?php echo $d['email']; ?>">

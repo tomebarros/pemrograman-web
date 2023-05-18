@@ -112,29 +112,21 @@
 
     <div class="row justify-content-center location" id="location">
       <div class="col">
-        <h2 class="text-center" data-aos="fade-up" data-aos-duration="1000">Location</h2>
+        <h2 class="text-center" data-aos="fade-up" data-aos-duration="1000">Lokasi</h2>
       </div>
     </div>
 
     <div class="row mb-3 mt-4 justify-content-center">
       <div class="col-lg-6" data-aos="zoom-in-right" data-aos-duration="1000">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254.29578027190226!2d125.51799766559786!3d-8.55385399473089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2bfcfa2bcd0fd0c!2sFamily%20of%20G2!5e1!3m2!1sid!2sid!4v1670423941666!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254.29578027190226!2d125.51799766559786!3d-8.55385399473089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2bfcfa2bcd0fd0c!2sFamily%20of%20G2!5e1!3m2!1sid!2sid!4v1670423941666!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4065.70958301519!2d123.62022230956391!3d-10.16305821421431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c56834e0db12415%3A0x4adc2c26430f6087!2sSTIKOM%20Uyelindo%20Kupang!5e0!3m2!1sid!2sid!4v1684372026195!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <div class="col-lg-6 mt-5" data-aos="zoom-in" data-aos-duration="1000">
-        <h3>Lokasi <span>AtoLaundry</span></h3>
-        <p>Lokasi AtoLaundry Yang Terletak Di Timor-Leste</p>
+        <h3>Lokasi <span>STIKOM Uyelindo</span></h3>
+        <p>Lokasi BEM STIKOM Uyelindo Kupang</p>
       </div>
     </div>
-
-    <!-- akhir location -->
-
-
-    <!-- developer -->
-
-    <!-- developer akir -->
-
-    <!-- akhir container -->
 
     <!-- footer -->
 

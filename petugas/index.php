@@ -8,11 +8,12 @@ if (isset($_SESSION['status'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <?php include "../cdn.php"; ?>
   <!-- mycss -->
   <link rel="stylesheet" href="css/style.css" />
-  <title>Login Petugas</title>
+  <title>BEM | Login Petugas</title>
 </head>
 
 <body>
@@ -54,7 +55,7 @@ if (isset($_SESSION['status'])) {
   ?>
 
   <div class="container">
-    <h3>AtoLaundry</h3>
+    <h3>BEM Laundry</h3>
     <div class="row kotak ">
       <div class="col-lg-6 animasi">
         <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_vvtkfqbo.json" background="transparent" speed="1" style="width: 100%;" loop autoplay></lottie-player>

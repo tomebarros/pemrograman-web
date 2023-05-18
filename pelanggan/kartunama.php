@@ -27,7 +27,7 @@ if (mysqli_num_rows($data) > 0) {
 
 <head>
   <?php include '../cdn.php'; ?>
-  <title>Kartu nama</title>
+  <title>BEM | Kartu nama</title>
   <link rel="stylesheet" href="css/kartunama.css">
 </head>
 
@@ -43,7 +43,7 @@ if (mysqli_num_rows($data) > 0) {
         <img src="../img/logo.png" alt="logo" width="40">
       </div>
       <div class="col">
-        <h3 style="font-family: cambria;font-size: 13px;font-weight: 1000;" align="center">ID CARD AtoLaundry<br>Jln.Perintis Kemerdekaan 1, Kayu Putih, Kota Kupang<br>
+        <h3 style="font-family: cambria;font-size: 13px;font-weight: 1000;" align="center">ID CARD BEM Laundry<br>Jln.Perintis Kemerdekaan 1, Kayu Putih, Kota Kupang<br>
           Nusa Tenggara Timur</h3>
       </div>
     </div>

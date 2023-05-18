@@ -6,7 +6,7 @@ include "../koneksi.php";
 <html lang="en">
 
 <head>
-  <title>Laundry | Transaksi</title>
+  <title>BEM | Transaksi</title>
   <?php include "../cdn.php"; ?>
   <?php include "../tema.php"; ?>
 
@@ -56,204 +56,217 @@ include "../koneksi.php";
         </div>
 
         <div class="col-md-8">
-          <input type="text" class="form-control" id="myInput" placeholder="Cari...">
+          <?php
+          $dataTransaksi = getData("SELECT * FROM transaksi");
+          if ($dataTransaksi > 0) { ?>
+            <input type="text" class="form-control" id="myInput" placeholder="Cari...">
+          <?php } ?>
         </div>
       </div>
+      <?php
+      $dataTransaksi = getData("SELECT * FROM transaksi");
+      if ($dataTransaksi > 0) { ?>
+        <div class="table-responsive mt-3">
 
-
-
-      <div class="table-responsive mt-3">
-
-        <table class="table table-striped table-hover table-sm">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>Detail</th>
-              <th>Tanggal Terima</th>
-              <th>Petugas Penerima</th>
-              <th>Tanggal Serah</th>
-              <th>Petugas Serah</th>
-              <th>Status</th>
-              <th>Pelanggan</th>
-              <th>Catatan</th>
-              <th>NIK</th>
-              <th>Aksi</th>
-            </tr>
-          </thead>
-          <tbody id="myTable">
-            <?php
-            $data = mysqli_query($koneksi, "SELECT * FROM transaksi");
-            $no = 1;
-            while ($d = mysqli_fetch_array($data)) {
-              $val = $d['simpan'];
-            ?>
+          <table class="table table-striped table-hover table-sm">
+            <thead>
               <tr>
-                <td><?php echo $no; ?></td>
-                <td><a href="detailtransaksi.php?id=<?php echo $d['idtransaksi']; ?>">Detail</a></td>
-                <td><?php echo tanggal($d['tanggalterima']); ?></td>
-                <td><?php echo namapetugas1($d['idpetugaspenerima']); ?></td>
-
-                <td>
-                  <?php
-                  if ($d['tanggalserah'] == '0000-00-00') {
-                    echo '-';
-                  } else {
-                    echo tanggal($d['tanggalserah']);
-                  }
-                  ?>
-                </td>
-
-                <td><?php echo namapetugas1($d['idpetugasserah']); ?></td>
-                <td><?php echo $d['status']; ?></td>
-                <td><?php echo namapelanggan($d['idpelanggan']); ?></td>
-                <td><?php echo $d['catatan']; ?></td>
-                <td><?php echo $d['nik']; ?></td>
-                <td>
-
-                  <?php if ($d['status'] == 'Selesai' or $d['status'] == 'Siap Diambil') { ?>
-                    <i class="bi bi-check-all icondesc" style="color: green;"></i>
-                  <?php } else { ?>
-                    <a href="#" data-toggle="modal" data-target="#myModalupdate<?php echo $d['idtransaksi']; ?>">Ubah</a>
-                  <?php }
-                  if (ceksimpantransaksi($d['idtransaksi']) == '0') { ?>
-                    <a href="deletetransaksi.php?idtransaksi=<?php echo $d['idtransaksi']; ?>" onclick="return confirm('Yakin ingin menghapus data?')">Hapus</a>
-                  <?php } ?>
-                </td>
+                <th>No</th>
+                <th>Detail</th>
+                <th>Tanggal Terima</th>
+                <th>Petugas Penerima</th>
+                <th>Tanggal Serah</th>
+                <th>Petugas Serah</th>
+                <th>Status</th>
+                <th>Pelanggan</th>
+                <th>Catatan</th>
+                <th>NIK</th>
+                <th>Aksi</th>
               </tr>
+            </thead>
+            <tbody id="myTable">
+              <?php
+              $data = mysqli_query($koneksi, "SELECT * FROM transaksi");
+              $no = 1;
+              while ($d = mysqli_fetch_array($data)) {
+                $val = $d['simpan'];
+              ?>
+                <tr>
+                  <td><?= $no; ?></td>
+                  <td><a href="detailtransaksi.php?id=<?php echo $d['idtransaksi']; ?>">Detail</a></td>
+                  <td><?= tanggal($d['tanggalterima']); ?></td>
+                  <td><?= namapetugas1($d['idpetugaspenerima']); ?></td>
+                  <td><?= tanggal($d['tanggalserah']); ?></td>
+                  <td><?= namapetugas1($d['idpetugasserah']); ?></td>
+                  <td><?= $d['status']; ?></td>
+                  <td><?= namapelanggan($d['idpelanggan']); ?></td>
+                  <td>
+                    <?php
+                    if (is_null($d['catatan']) or $d['catatan'] == '') {
+                      echo '-';
+                    } else {
+                      echo $d['catatan'];
+                    }
+                    ?>
+                  </td>
+                  <td>
+                    <?php
+                    if (is_null($d['nik']) or $d['nik'] == '') {
+                      echo '-';
+                    } else {
+                      echo $d['catatan'];
+                    }
+                    ?>
+                  </td>
+                  <td>
+                    <?php if ($d['status'] == 'Selesai' or $d['status'] == 'Siap Diambil') { ?>
+                      <i class="bi bi-check-all icondesc" style="color: green;"></i>
+                    <?php } else { ?>
+                      <a href="#" data-toggle="modal" data-target="#myModalupdate<?php echo $d['idtransaksi']; ?>">Ubah</a>
+                    <?php }
+                    if (ceksimpantransaksi($d['idtransaksi']) == '0') { ?>
+                      <a href="deletetransaksi.php?idtransaksi=<?php echo $d['idtransaksi']; ?>" onclick="return confirm('Yakin ingin menghapus data?')">Hapus</a>
+                    <?php } ?>
+                  </td>
+                </tr>
 
-              <!-- modal update -->
-              <div class="modal fade" id="myModalupdate<?php echo $d['idtransaksi'] ?>">
-                <div class="modal-dialog">
-                  <div class="modal-content">
+                <!-- modal update -->
+                <div class="modal fade" id="myModalupdate<?php echo $d['idtransaksi'] ?>">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
 
-                    <div class="modal-header">
-                      <h4 class="modal-title">Ubah Data</h4>
-                      <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
+                      <div class="modal-header">
+                        <h4 class="modal-title">Ubah Data</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
 
-                    <div class="modal-body">
-                      <form onsubmit="return confirm('Yakin ingin mengubah data?')" action="updatetransaksi.php" method="POST">
+                      <div class="modal-body">
+                        <form onsubmit="return confirm('Yakin ingin mengubah data?')" action="updatetransaksi.php" method="POST">
 
-                        <input type="hidden" name="idtransaksi" value="<?php echo $d['idtransaksi']; ?>">
-                        <input type="hidden" name="simpan" value="<?php echo $d['simpan']; ?>">
+                          <input type="hidden" name="idtransaksi" value="<?php echo $d['idtransaksi']; ?>">
+                          <input type="hidden" name="simpan" value="<?php echo $d['simpan']; ?>">
 
-                        <div class="input-group mb-2">
-                          <div class="input-group-prepend">
-                            <div class="input-group-text">Tanggal Terima</div>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text">Tanggal Terima</div>
+                            </div>
+                            <input <?php if ($val == '1') { ?> disabled <?php } ?> type="date" class="form-control" name="tanggalterima" value="<?php echo $d['tanggalterima']; ?>" required>
                           </div>
-                          <input <?php if ($val == '1') { ?> disabled <?php } ?> type="date" class="form-control" name="tanggalterima" value="<?php echo $d['tanggalterima']; ?>" required>
-                        </div>
 
-                        <div class="input-group mb-2">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Petugas Penerima</span>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Petugas Penerima</span>
+                            </div>
+                            <?php
+                            $data1 = mysqli_query($koneksi, "SELECT * FROM petugas"); ?>
+                            <select <?php if ($val == '1') { ?> disabled <?php } ?> class='form-control' name='idpetugaspenerima' required>
+
+                              <?php $existingid = $d['idpetugaspenerima'];
+                              while ($d1 = mysqli_fetch_array($data1)) {
+                                if ($existingid == $d1['idpetugas']) {
+                                  echo "<option selected='selected' value='" . $d1['idpetugas'] . "'>" . $d1['nama'] . "</option>";
+                                } else {
+                                  echo "<option value='" . $d1['idpetugas'] . "'>" . $d1['nama'] . "</option>";
+                                }
+                              }
+                              echo "</select>";
+                              ?>
                           </div>
-                          <?php
-                          $data1 = mysqli_query($koneksi, "SELECT * FROM petugas"); ?>
-                          <select <?php if ($val == '1') { ?> disabled <?php } ?> class='form-control' name='idpetugaspenerima' required>
 
-                            <?php $existingid = $d['idpetugaspenerima'];
-                            while ($d1 = mysqli_fetch_array($data1)) {
-                              if ($existingid == $d1['idpetugas']) {
-                                echo "<option selected='selected' value='" . $d1['idpetugas'] . "'>" . $d1['nama'] . "</option>";
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Tanggal Serah</span>
+                            </div>
+                            <input type="date" class="form-control" name="tanggalserah" value="<?php echo $d['tanggalserah']; ?>" required>
+                          </div>
+
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Petugas Serah</span>
+                            </div>
+                            <?php
+                            $data2 = mysqli_query($koneksi, "SELECT * FROM petugas");
+                            echo "<select class='form-control' name='idpetugasserah' required>";
+                            echo "<option value=''></option>";
+                            $existingid = $d['idpetugasserah'];
+                            while ($d2 = mysqli_fetch_array($data2)) {
+                              if ($existingid == $d2['idpetugas']) {
+                                echo "<option selected='selected' value='" . $d2['idpetugas'] . "'>" . $d2['nama'] . "</option>";
                               } else {
-                                echo "<option value='" . $d1['idpetugas'] . "'>" . $d1['nama'] . "</option>";
+                                echo "<option value='" . $d2['idpetugas'] . "'>" . $d2['nama'] . "</option>";
                               }
                             }
                             echo "</select>";
                             ?>
-                        </div>
-
-                        <div class="input-group mb-2">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Tanggal Serah</span>
                           </div>
-                          <input type="date" class="form-control" name="tanggalserah" value="<?php echo $d['tanggalserah']; ?>" required>
-                        </div>
 
-                        <div class="input-group mb-2">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Petugas Serah</span>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Status</span>
+                            </div>
+                            <select name="status" class="costom-select form-control">
+                              <option value="Diterima" <?php if ($d['status'] == 'Diterima') echo 'selected' ?>>Diterima</option>
+                              <option value="Dicuci" <?php if ($d['status'] == 'Dicuci') echo 'selected' ?>>Dicuci</option>
+                              <option value="Dikeringkan" <?php if ($d['status'] == 'Dikeringkan') echo 'selected' ?>>Dikeringkan</option>
+                              <option value="Disetrika" <?php if ($d['status'] == 'Disetrika') echo 'selected' ?>>Disetrika</option>
+                              <option value="Dibungkus" <?php if ($d['status'] == 'Dibungkus') echo 'selected' ?>>Dibungkus</option>
+                              <option value="Siap Diambil" <?php if ($d['status'] == 'Siap Diambil') echo 'selected' ?>>Siap Diambil</option>
+                              <option value="Selesai" <?php if ($d['status'] == 'Selesai') echo 'selected' ?>>Selesai</option>
+                            </select>
                           </div>
-                          <?php
-                          $data2 = mysqli_query($koneksi, "SELECT * FROM petugas");
-                          echo "<select class='form-control' name='idpetugasserah' required>";
-                          echo "<option value=''></option>";
-                          $existingid = $d['idpetugasserah'];
-                          while ($d2 = mysqli_fetch_array($data2)) {
-                            if ($existingid == $d2['idpetugas']) {
-                              echo "<option selected='selected' value='" . $d2['idpetugas'] . "'>" . $d2['nama'] . "</option>";
-                            } else {
-                              echo "<option value='" . $d2['idpetugas'] . "'>" . $d2['nama'] . "</option>";
-                            }
-                          }
-                          echo "</select>";
-                          ?>
-                        </div>
 
-                        <div class="input-group mb-2">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Status</span>
-                          </div>
-                          <select name="status" class="costom-select form-control">
-                            <option value="Diterima" <?php if ($d['status'] == 'Diterima') echo 'selected' ?>>Diterima</option>
-                            <option value="Dicuci" <?php if ($d['status'] == 'Dicuci') echo 'selected' ?>>Dicuci</option>
-                            <option value="Dikeringkan" <?php if ($d['status'] == 'Dikeringkan') echo 'selected' ?>>Dikeringkan</option>
-                            <option value="Disetrika" <?php if ($d['status'] == 'Disetrika') echo 'selected' ?>>Disetrika</option>
-                            <option value="Dibungkus" <?php if ($d['status'] == 'Dibungkus') echo 'selected' ?>>Dibungkus</option>
-                            <option value="Siap Diambil" <?php if ($d['status'] == 'Siap Diambil') echo 'selected' ?>>Siap Diambil</option>
-                            <option value="Selesai" <?php if ($d['status'] == 'Selesai') echo 'selected' ?>>Selesai</option>
-                          </select>
-                        </div>
-
-                        <div class="input-group mb-2">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Pelanggan</span>
-                          </div>
-                          <?php
-                          $data3 = mysqli_query($koneksi, "SELECT * FROM pelanggan"); ?>
-                          <select <?php if ($val == '1') { ?> disabled <?php } ?> class='form-control' name='idpelanggan'>
-                            <?php $existingid = $d['idpelanggan'];
-                            while ($d3 = mysqli_fetch_array($data3)) {
-                              if ($existingid == $d3['idpelanggan']) {
-                                echo "<option selected='selected' value='" . $d3['idpelanggan'] . "'>" . $d3['nama'] . "</option>";
-                              } else {
-                                echo "<option value='" . $d3['idpelanggan'] . "'>" . $d3['nama'] . "</option>";
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Pelanggan</span>
+                            </div>
+                            <?php
+                            $data3 = mysqli_query($koneksi, "SELECT * FROM pelanggan"); ?>
+                            <select <?php if ($val == '1') { ?> disabled <?php } ?> class='form-control' name='idpelanggan'>
+                              <?php $existingid = $d['idpelanggan'];
+                              while ($d3 = mysqli_fetch_array($data3)) {
+                                if ($existingid == $d3['idpelanggan']) {
+                                  echo "<option selected='selected' value='" . $d3['idpelanggan'] . "'>" . $d3['nama'] . "</option>";
+                                } else {
+                                  echo "<option value='" . $d3['idpelanggan'] . "'>" . $d3['nama'] . "</option>";
+                                }
                               }
-                            }
-                            echo "</select>";
-                            ?>
-                        </div>
-
-                        <div class="input-group mb-2">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">Catatan</span>
+                              echo "</select>";
+                              ?>
                           </div>
-                          <input type="text" class="form-control" name="catatan" value="<?php echo $d['catatan']; ?>">
-                        </div>
 
-                        <div class="input-group mb-2">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text">NIK</span>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Catatan</span>
+                            </div>
+                            <input type="text" class="form-control" name="catatan" value="<?php echo $d['catatan']; ?>">
                           </div>
-                          <input type="number" class="form-control" name="nik" value="<?php echo $d['nik']; ?>">
-                        </div>
-                    </div>
 
-                    <div class="modal-footer">
-                      <input type="submit" class="btn btn-success" value="Simpan"></form>
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
-                    </div>
+                          <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">NIK</span>
+                            </div>
+                            <input type="number" class="form-control" name="nik" value="<?php echo $d['nik']; ?>">
+                          </div>
+                      </div>
 
+                      <div class="modal-footer">
+                        <input type="submit" class="btn btn-success" value="Simpan"></form>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Tutup</button>
+                      </div>
+
+                    </div>
                   </div>
                 </div>
-              </div>
 
-            <?php $no++;
-            } ?>
-          </tbody>
-        </table>
-      </div>
+              <?php $no++;
+              } ?>
+            </tbody>
+          </table>
+        </div>
+      <?php } else {
+        echo "<h4 class='mt-3 text-center'>Data Transaksi Belum Ada</h4>";
+      } ?>
+
     </div>
 
     <!-- modal insert -->
@@ -394,7 +407,8 @@ include "../koneksi.php";
                   <span class="input-group-text">Pilihan</span>
                 </div>
 
-                <select class="costom-select form-control" name="pilihan">
+                <select class="costom-select form-control" name="pilihan" required>
+                  <option value=""></option>
                   <option value="pdf">PDF</option>
                   <option value="xls">XLS</option>
                 </select>
@@ -430,7 +444,8 @@ include "../koneksi.php";
                   <span class="input-group-text">Status</span>
                 </div>
 
-                <select name="status" class="costom-select form-control">
+                <select name="status" class="costom-select form-control" required>
+                  <option value=""></option>
                   <option value="Diterima">Diterima</option>
                   <option value="Dicuci">Dicuci</option>
                   <option value="Dikeringkan">Dikeringkan</option>
@@ -446,7 +461,8 @@ include "../koneksi.php";
                   <span class="input-group-text">Pilihan</span>
                 </div>
 
-                <select name="pilihan" class="costom-select form-control">
+                <select name="pilihan" class="costom-select form-control" required>
+                  <option value=""></option>
                   <option value="pdf">PDF</option>
                   <option value="xls">XLS</option>
                 </select>
@@ -477,10 +493,10 @@ include "../koneksi.php";
               <input type="hidden" value="<?php echo namapetugas($_SESSION['username']); ?>" name="petugas">
               <div class="input-group mb-2">
                 <div class="input-group-prepend">
-                  <span class="input-group-text">Nama</span>
+                  <span class="input-group-text">Nama Pelanggan</span>
                 </div>
-
                 <select name="idpelanggan" class="costom-select form-control" required>
+                  <option value=""></option>
                   <?php
                   $datap = mysqli_query($koneksi, "SELECT * FROM pelanggan");
                   while ($dp = mysqli_fetch_array($datap)) {
@@ -495,7 +511,8 @@ include "../koneksi.php";
                   <span class="input-group-text">Pilihan</span>
                 </div>
 
-                <select name="pilihan" class="costom-select form-control">
+                <select name="pilihan" class="costom-select form-control" required>
+                  <option value=""></option>
                   <option value="pdf">PDF</option>
                   <option value="xls">XLS</option>
                 </select>
