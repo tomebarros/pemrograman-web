@@ -23,8 +23,8 @@
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-  <!-- icon fontAwesome -->
-  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- icon botstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
   <!-- Aos Animation -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -128,11 +128,56 @@
       </div>
     </div>
 
+    <!-- awal contact -->
+    <div class="container contact" id="contact">
+      <div class="row text-center mb-3">
+        <div class="col">
+          <h2>Hubungi Kami</h2>
+        </div>
+      </div>
+
+      <div class="row justify-content-center form">
+        <div class="col-md-6 d-flex justify-content-center align-items-center flex-column kiri">
+          <img src="img/logo.png" alt="Logo BEM" class="img-fluid">
+          <div class="links">
+            <a href="#"><i class="bi bi-instagram text-dark"></i></a>
+            <a href="#"><i class="bi bi-youtube text-dark"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 kanan">
+          <form action="" method="post">
+
+            <div class="form-group">
+              <label for="name">Nama Lengkap</label>
+              <input type="text" name="nama" class="form-control bg-none" id="name" aria-describedby="emailHelp" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" class="form-control" id="email" aria-describedby="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="judul">Judul</label>
+              <input type="text" name="judul" class="form-control" id="judul" aria-describedby="judul" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="pesan" for="pesan" class="form-lable">Pesan</label>
+              <textarea class="form-control" name="pesan" id="pesan" cols="30" rows="3" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-kirim">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
     <!-- footer -->
 
     <div class="row justify-content-center footer">
       <div class="col justify-content-center d-flex">
-        © 2022 Copyright: <a href="#home" class="text-dark"> AtoLaundry</a>
+        © 2022 Copyright: <a href="#home" class="text-dark"> Tome Barros</a>
       </div>
     </div>
   </div>

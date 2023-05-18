@@ -8,7 +8,7 @@ html {
 
 body {
   font-family: poppins;
-  background: #dedede;
+  background: #f6f8fa;
 }
 
 /* navbar */
@@ -27,7 +27,7 @@ nav {
 .navbar-brand,
 .nav-link {
   text-align: right;
-  color: white !important;
+  color: #f6f8fa !important;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
 }
 
@@ -96,14 +96,14 @@ ul li ul li a:hover {
   position: absolute;
   width: 100%;
   height: 101%;
-  background: linear-gradient(0deg, #dedede 3%, rgba(255, 255, 255, 0) 35%);
+  background: linear-gradient(0deg, #f6f8fa 3%, rgba(255, 255, 255, 0) 35%);
 }
 
 /* jumbotron display4 */
 
 .jumbotron .display-4 {
 
-  color: #dedede;
+  color: #f6f8fa;
   font-weight: 200px;
   text-shadow: 1px 1px 10px rgba(0, 0, 0, 1);
   font-size: 40px;
@@ -115,8 +115,9 @@ ul li ul li a:hover {
 
 /* about us */
 .about,
-.location {
-  padding: 5rem 0 3rem;
+.location,
+.contact h2 {
+  padding: 5rem 0 1rem;
   text-align: center;
 }
 
@@ -136,9 +137,9 @@ ul li ul li a:hover {
   color: #acacac;
   font-weight: 200;
   text-transform: capitalize;
+  text-align: center;
   margin: 30px 0;
 }
-
 
 
 /* location*/
@@ -166,13 +167,19 @@ ul li ul li a:hover {
   margin: 30px 0;
 }
 
-/* dev */
-.dev figure img {
-  width: 200px;
-  margin-top: 150px;
+/* contact */
+.contact .form .kiri img {
+  width: 10rem;
 }
 
+.contact .form .kiri .links a {
+  font-size: 1.5rem;
+}
 
+#pesan {
+  min-height: 9rem;
+  max-height: 9rem;
+}
 
 /* footer */
 .footer {
@@ -232,13 +239,19 @@ ul li ul li a:hover {
   }
 
   .about,
+  .location,
+  .contact h2 {
+    padding: 5rem 0 3rem;
+    text-align: center;
+  }
+
+  .about,
   .location {
     text-align: left;
   }
 
-  .dev figure figcaption {
-    font-family: poppins;
-    font-size: 20px;
+  .contact .form .kiri img {
+    width: 20rem;
   }
 
 }
