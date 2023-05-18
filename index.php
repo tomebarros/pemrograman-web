@@ -145,7 +145,7 @@
           </div>
         </div>
         <div class="col-md-6 kanan">
-          <form action="" method="post">
+          <form action="insertpesan.php" method="post">
 
             <div class="form-group">
               <label for="name">Nama Lengkap</label>
