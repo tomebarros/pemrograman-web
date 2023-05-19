@@ -14,7 +14,7 @@ mysqli_query($koneksi, "INSERT INTO pesan VALUES('','$nama','$email','$judul','$
 echo "
 <script>
   alert('Pesan Anda berhasil terkirim, Terima Kasih');
-  document.location = 'index.php';
+  document.location = 'index.php#contact';
 </script>
 ";
 
