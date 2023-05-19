@@ -140,8 +140,8 @@
         <div class="col-md-6 d-flex justify-content-center align-items-center flex-column kiri">
           <img src="img/logo.png" alt="Logo BEM" class="img-fluid">
           <div class="links">
-            <a href="#"><i class="bi bi-instagram text-dark"></i></a>
-            <a href="#"><i class="bi bi-youtube text-dark"></i></a>
+            <a href="https://www.instagram.com/bem_stikom_uyelindo/" target="_blank"><i class="bi bi-instagram text-dark"></i></a>
+            <a href="https://www.youtube.com/@STIKOMUYELINDOTV" target="_blank"><i class="bi bi-youtube text-dark"></i></a>
           </div>
         </div>
         <div class="col-md-6 kanan">
