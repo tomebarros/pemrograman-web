@@ -51,10 +51,7 @@
           <a class="nav-link active" id="home" href="#home">Home <span class="sr-only">(current)</span></a>
           <a class="nav-link" href="#about">Tentang Kami</a>
           <a class="nav-link" href="#location">Lokasi</a>
-
-          <div class="ml-auto mb-2 akun">
-            <a class="btn btn-outline-light" href="registrasi/">Daftar</a>
-          </div>
+          <a class="nav-link" href="#contact">Kontak</a>
 
           <ul class="justify-content-end d-flex akun">
             <li>
@@ -79,7 +76,8 @@
   <div class="jumbotron">
     <div class="container">
       <h1 class="display-4">
-        Selamat Datang Di <span>BEM Laundry</span>
+        Selamat Datang Di <span>BEM Laundry</span><br>
+        <a href="registrasi/" class="btn btn-dark">Daftar</a>
       </h1>
     </div>
   </div>
