@@ -1,6 +1,6 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-  
+
   nav {
     background-image: url(../img/nav1.png);
   }
@@ -120,7 +120,7 @@
     .nav-link {
       text-transform: uppercase;
       margin-right: 10px;
-      font-size:15px;
+      font-size: 15px;
     }
 
     nav span #clock {
@@ -145,6 +145,7 @@
 
     body .wrapper .container h1 {
       font-size: 40px;
+      color: #010101;
     }
 
     .icondesc {

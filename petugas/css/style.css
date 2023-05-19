@@ -1,37 +1,37 @@
-  body {
-    background-color: #dedede !important;
-  }
+body {
+  background-color: #dedede !important;
+}
 
+.kotak {
+  margin-top: 60px;
+}
+
+.container h3 {
+  margin-top: 20px;
+  text-align: center;
+  font-family: Viga;
+  color: #007bff;
+  font-size: 50px;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+
+}
+
+lottie-player {
+  display: none;
+}
+
+
+@media (min-width: 992px) {
   .kotak {
-    margin-top: 60px;
-  }
-
-  .container h3 {
-    margin-top: 20px;
-    text-align: center;
-    font-family: Viga;
-    color: #007bff;
-    font-size: 50px;
-    text-shadow: 1px 1px 1px rgb(0, 0, 0);
-
+    margin-top: 50px;
   }
 
   lottie-player {
-    display: none;
+    display: inline-block;
   }
 
-
-  @media (min-width: 992px) {
-    .kotak {
-      margin-top: 50px;
-    }
-
-    lottie-player {
-      display: inline-block;
-    }
-
-    .container h3 {
-      font-size: 75px;
-    }
-
+  .container h3 {
+    font-size: 75px;
   }
+
+}

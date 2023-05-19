@@ -39,6 +39,10 @@ $namapetugas = $namapetugas[0];
       </li>
 
       <li class="nav-item">
+        <a href="pesan.php" class="nav-link">Pesan</a>
+      </li>
+
+      <li class="nav-item">
         <a class="nav-link" href="logout.php" onclick="return confirm('Logout Sekarang')">Logout</a>
       </li>
 

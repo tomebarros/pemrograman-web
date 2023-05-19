@@ -23,9 +23,7 @@ include "../koneksi.php";
 			<div class="row">
 				<div class="col-sm-3">
 					<a href="#" class="btn btn-sm btn-info" data-toggle="modal" data-target="#myModalinsert">Tambah Data <i class="bi bi-person-plus-fill"></i></a>
-					<a href="backup.php" class="btn btn-sm btn-warning">DB BackUP</a>
-
-
+					<!-- <a href="backup.php" class="btn btn-sm btn-warning">DB BackUP</a> -->
 
 				</div>
 				<div class="col-sm-9 mt-2">
