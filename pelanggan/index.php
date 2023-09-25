@@ -14,7 +14,7 @@ session_start();
 
   <!-- mycss -->
   <link rel="stylesheet" href="css/style.css" />
-  <title>BEM | Login Pelanggan</title>
+  <title>Tome Laundry | Login Pelanggan</title>
 </head>
 
 <body>
@@ -125,8 +125,8 @@ session_start();
   <div class="container">
     <div class="row kotak">
       <div class="col-lg-6 mt-3 header">
-        <h3>BEM Laundry</h3>
-        <p>Dengan BEM Laundry anda dapat memantau transaksi dan data anda</p>
+        <h3>Tome Laundry</h3>
+        <p>Dengan Tome Laundry anda dapat memantau transaksi dan data anda</p>
       </div>
 
       <div class="col-lg-6">
