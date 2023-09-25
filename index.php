@@ -40,7 +40,7 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">BEM Laundry</a>
+      <a class="navbar-brand" href="#">Tome Barros</a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -76,7 +76,7 @@
   <div class="jumbotron">
     <div class="container">
       <h1 class="display-4">
-        Selamat Datang Di <span>BEM Laundry</span><br>
+        Selamat Datang Di <span>Tome Laundry</span><br>
         <a href="registrasi/" class="btn btn-dark">Daftar</a>
       </h1>
     </div>
@@ -98,9 +98,9 @@
           </lottie-playe>
       </div>
       <div class="col-lg-6 mt-5" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
-        <h3>Website Laundry BEM Stikom Uyelindo Kupang</h3>
+        <h3>Website Tome Laundry</h3>
         <p class="text-capitalize">minimalis, elegan, warna-warna cerah, mudah digunakan, transparan, ramah lingkungan, layanan antar-jemput, paket khusus, keamanan data, blog berita terkini, promo dan diskon, integrasi dengan media sosial, pilihan bahasa, sistem pembayaran yang aman, estimasi waktu selesai, layanan cuci kilat, memberikan tips perawatan pakaian, layanan penjemputan 24 jam, pilihan deterjen berkualitas, sistem reward atau loyalty program.</p>
-        <!-- <a href="mailto:admin@21120055laundry.my.id?subject=Dari%20AtoLaundry&body=Dear%20Admin%0A" class="btn btn-primary kontak tombol" title="Contak Admin Via Email">Contact me</a> -->
+        <a href="mailto:admin@21120055laundry.my.id?subject=Dari%20AtoLaundry&body=Dear%20Admin%0A" class="btn btn-primary kontak tombol" title="Contak Admin Via Email">Contact me</a>
       </div>
     </div>
     <!-- akhir about us -->
@@ -116,13 +116,13 @@
 
     <div class="row mb-3 mt-4 justify-content-center">
       <div class="col-lg-6" data-aos="zoom-in-right" data-aos-duration="1000">
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254.29578027190226!2d125.51799766559786!3d-8.55385399473089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2bfcfa2bcd0fd0c!2sFamily%20of%20G2!5e1!3m2!1sid!2sid!4v1670423941666!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4065.70958301519!2d123.62022230956391!3d-10.16305821421431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c56834e0db12415%3A0x4adc2c26430f6087!2sSTIKOM%20Uyelindo%20Kupang!5e0!3m2!1sid!2sid!4v1684372026195!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254.29578027190226!2d125.51799766559786!3d-8.55385399473089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe2bfcfa2bcd0fd0c!2sFamily%20of%20G2!5e1!3m2!1sid!2sid!4v1670423941666!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4065.70958301519!2d123.62022230956391!3d-10.16305821421431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2c56834e0db12415%3A0x4adc2c26430f6087!2sSTIKOM%20Uyelindo%20Kupang!5e0!3m2!1sid!2sid!4v1684372026195!5m2!1sid!2sid" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
       </div>
 
       <div class="col-lg-6 mt-5" data-aos="zoom-in" data-aos-duration="1000">
-        <h3>Lokasi <span>STIKOM Uyelindo</span></h3>
-        <p>Lokasi BEM STIKOM Uyelindo Kupang</p>
+        <h3>Lokasi <span>Tome Laundry</span></h3>
+        <p>Lokasi Tome Laundry yang terletak Di Timor-Leste</p>
       </div>
     </div>
 
@@ -135,13 +135,13 @@
       </div>
 
       <div class="row justify-content-center form">
-        <div class="col-md-6 d-flex justify-content-center align-items-center flex-column kiri">
+        <!-- <div class="col-md-6 d-flex justify-content-center align-items-center flex-column kiri">
           <img src="img/logo.png" alt="Logo BEM" class="img-fluid">
           <div class="links">
             <a href="https://www.instagram.com/bem_stikom_uyelindo/" target="_blank"><i class="bi bi-instagram text-dark"></i></a>
             <a href="https://www.youtube.com/@STIKOMUYELINDOTV" target="_blank"><i class="bi bi-youtube text-dark"></i></a>
           </div>
-        </div>
+        </div> -->
         <div class="col-md-6 kanan">
           <form action="insertpesan.php" method="post">
 
