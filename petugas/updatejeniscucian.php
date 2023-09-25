@@ -19,7 +19,7 @@ if (mysqli_num_rows($data) > 0) {
   $data2 = mysqli_query($koneksi, "SELECT * FROM jeniscucian WHERE nama LIKE '$nama' AND idjeniscucian != '$idjeniscucian'");
   if (mysqli_num_rows($data2) > 0) {
     echo "<script>
-    alert('Nama Jenis Cucian yang Anda masukan sudah terdaftar. Silahkan ulanggi denggan memasukan data yang lainnya')
+    alert('Nama Jenis Cucian yang Anda masukan sudah terdaftar. Silahkan ulangi dengan memasukan data yang lainnya')
     document.location.href = 'jeniscucian.php'
     </script>";
   } else {
