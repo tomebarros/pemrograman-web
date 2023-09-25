@@ -5,7 +5,7 @@
 
   <link rel="icon" href="img/logo.png">
 
-  <title>BEM | Laundry</title>
+  <title>Tome Laundry | Home</title>
 
   <!-- Required meta tags -->
   <meta charset="utf-8" />
